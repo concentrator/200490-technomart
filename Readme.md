@@ -1,7 +1,6 @@
 # Личный проект «Техномарт»
 
 * Студент: [Dmitry Iovlev](https://up.htmlacademy.ru/htmlcss/19/user/200490).
-* Наставник: `Неизвестно`.
 
 ---
 
