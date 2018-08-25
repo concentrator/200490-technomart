@@ -190,10 +190,10 @@
 
       <section class="page-main__services services">
         <div class="container">
-          <h2 class="services__title">Сервисы</h2>
+          <h2 class="services__title heading-second">Сервисы</h2>
           <p class="services__intro">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <div class="services__selector">
-            <button class="services__switch">Доставка</button>
+            <button class="services__switch services__switch--active">Доставка</button>
             <button class="services__switch">Гарантия</button>
             <button class="services__switch">Кредит</button>
           </div>
@@ -220,12 +220,12 @@
             <h2 class="about-us__title heading-second">Компания «Техномарт»</h2>
             <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
-            <ul>
+            <ul class="about-us__list">
               <li>Деловые линии</li>
               <li>Автотрейдинг</li>
               <li>ЖелДорЭкспедиция</li>
             </ul>
-            <a class="about-us__button button" href="#">Подробнее о компании</a>
+            <a class="about-us__button button button--red" href="#">Подробнее о компании</a>
           </section>
           <section class="shop-info__contact contact-us">
             <h2 class="contact-us__title heading-second">Контакты</h2>
@@ -233,7 +233,7 @@
             <div class="contact-us__map">
               <img src="img/map_small.png" width="300" height="158" alt="Как добраться">
             </div>
-            <button class="contact-us__button button">Заблудились? Напишите нам!</button>
+            <a class="contact-us__button button button--red" href="#">Заблудились? Напишите нам!</a>
           </section>
         </div>
       </div>
@@ -251,7 +251,8 @@
           </ul>
         </div>
         <div class="page-footer__shop footer-shop">
-          <p class="footer-shop__contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+          <p class="footer-shop__contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7</p>
+          <p class="footer-shop__contacts">(812) 555-05-55</p>
           <ul class="footer-shop__list">
             <li class="footer-shop__item"><a href="#">Материалы</a></li>
             <li class="footer-shop__item"><a href="#">Техника</a></li>
@@ -297,7 +298,9 @@
           <label for="message">Текст письма:</label>
           <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="modal-contact__submit button button--red" type="submit">Отправить</button>
+        <div class="modal-contact__bottom">
+          <button class="modal-contact__submit button button--red" type="submit">Отправить</button>
+        </div>
       </form>
       <button class="modal-contact__close"><span class="visually-hidden">Закрыть</span></button>
     </section>
