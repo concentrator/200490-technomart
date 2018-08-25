@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Техномарт</title>
   </head>
   <body>
@@ -11,7 +13,7 @@
           <a class="logo" href="index.html">ТЕХНОМАРТ</a>
           <form class="header-top__search search" action="https://echo.htmlacademy.ru/" method="post">
             <input class="search__input" type="text" name="search" placeholder="Поиск:">
-            <button class="search__button">Искать</button>
+            <button class="search__button"><span class="visually-hidden">Искать</span></button>
           </form>
           <div class="header-top__nav">
             <a class="header-top__link header-top__link--bookmark" href="#">Закладки: <span>0</span></a>
@@ -24,7 +26,7 @@
         <div class="page-header__main header-main">
           <p class="header-main__slogan">Интернет-магазин строительных материалов и инструментов для ремонта</p>
           <div class="header-main__contacts">
-            <p class="header-main__phone">+7 (812) 555-05-55</p>
+            <p class="header-main__phone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
             <p class="header-main__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="header-main__user">
@@ -72,6 +74,23 @@
           <form class="filter__form" method="POST" action="https://echo.htmlacademy.ru">
             <fieldset>
               <legend>Цена:</legend>
+              <div class="filter__price-range">
+                <div class="filter__price-bar">
+                  <button class="filter__knob filter__knob--min" type="button"><span class="visually-hidden">Минимальная</span></button>
+                  <button class="filter__knob filter__knob--max" type="button"><span class="visually-hidden">Максимальная</span></button>
+                </div>
+              </div>
+              <div class="filter__price-output">
+                <p class="filter__price-value">
+                  <label class="visually-hidden" for="price-min">От</label>
+                  <input class="filter__price-field" type="text" name="price-min" value="0" id="price-min">
+                </p>
+                <span class="filter__price-dash">—</span>
+                <p class="filter__price-value">
+                  <label class="visually-hidden" for="price-max">До</label>
+                  <input class="filter__price-field" type="text" name="price-max" value="30000" id="price-max">
+                </p>
+              </div>
             </fieldset>
             <fieldset>
               <legend>Производители:</legend>
@@ -298,7 +317,7 @@
       </div>
     </footer>
     <section class="modal modal-cart">
-      <p class="modal-cart__text">Товар добавлен в корзину!</p>
+      <h2 class="modal-cart__text">Товар добавлен в корзину!</h2>
       <div class="modal-cart__buttons">
         <a class="modal-cart__checkout" href="#">Оформить заказ</a>
         <button type="button">Продолжить покупки</button>
