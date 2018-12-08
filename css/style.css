@@ -149,52 +149,6 @@ body {
   margin-bottom: 20px;
 }
 
-.promo__item::before {
-  content: "";
-  display: block;
-  position: absolute;
-}
-
-.promo__item--materials::before {
-  top: 31px;
-  right: 43px;
-  width: 44px;
-  height: 65px;
-  background: url("../img/icon-1.svg") no-repeat center;
-}
-
-.promo__item--instruments::before {
-  top: 33px;
-  right: 28px;
-  width: 75px;
-  height: 61px;
-  background: url("../img/icon-2.svg") no-repeat center;
-}
-
-.promo__item--technics::before {
-  top: 31px;
-  right: 31px;
-  width: 78px;
-  height: 62px;
-  background: url("../img/icon-3.svg") no-repeat center;
-}
-
-.promo__item--sale::before {
-  top: 26px;
-  right: 45px;
-  width: 59px;
-  height: 72px;
-  background: url("../img/icon-4.svg") no-repeat center;
-}
-
-.promo__item--delivery::before {
-  top: 32px;
-  right: 31px;
-  width: 78px;
-  height: 63px;
-  background: url("../img/icon-5.svg") no-repeat center;
-}
-
 .promo__slider {
   width: 620px;
   min-height: 266px;
@@ -224,41 +178,8 @@ body {
   justify-content: space-between;
 }
 
-.brand {
-  width: 220px;
-  height: 145px;
-  margin-bottom: 20px;
-  border: 1px solid #eaeaea;
-  box-sizing: border-box;
-}
-
-.brand a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.brand img {
-  display: block;
-}
-
-.services {
-  min-height: 522px;
-}
-
 .page-main__services {
   margin-top: 65px;
-}
-
-.services__slider {
-  display: flex;
-}
-
-.services__selector {
-  width: 240px;
-  margin-right: 60px;
 }
 
 .shop-info {
@@ -345,7 +266,6 @@ body {
   text-transform: uppercase;
 }
 
-
 .heading-main {
   padding: 30px;
   padding-top: 29px;
@@ -360,6 +280,16 @@ body {
   line-height: 30px;
   font-weight: 400;
   color: #32425c;
+  text-transform: uppercase;
+}
+
+.heading-second {
+  margin: 25px 0;
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -584,10 +514,6 @@ body {
   width: 300px;
   margin: 0;
   padding: 28px 48px 21px 52px;
-/*  margin-left: 52px;
-  margin-right: 68px;
-  margin-top: 48px;
-  margin-bottom: 41px;*/
   margin-right: 20px;
   box-sizing: border-box;
   font-style: italic;
@@ -874,6 +800,52 @@ body {
   background-color: #8ed78f;
 }
 
+.promo__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.promo__item--materials::before {
+  top: 31px;
+  right: 43px;
+  width: 44px;
+  height: 65px;
+  background: url("../img/icon-1.svg") no-repeat center;
+}
+
+.promo__item--instruments::before {
+  top: 33px;
+  right: 28px;
+  width: 75px;
+  height: 61px;
+  background: url("../img/icon-2.svg") no-repeat center;
+}
+
+.promo__item--technics::before {
+  top: 31px;
+  right: 31px;
+  width: 78px;
+  height: 62px;
+  background: url("../img/icon-3.svg") no-repeat center;
+}
+
+.promo__item--sale::before {
+  top: 26px;
+  right: 45px;
+  width: 59px;
+  height: 72px;
+  background: url("../img/icon-4.svg") no-repeat center;
+}
+
+.promo__item--delivery::before {
+  top: 32px;
+  right: 31px;
+  width: 78px;
+  height: 63px;
+  background: url("../img/icon-5.svg") no-repeat center;
+}
+
 .promo__title {
   margin: 0;
   font-family: Cuprum, Arial, sans-serif;
@@ -904,7 +876,7 @@ body {
   box-sizing: border-box;
 }
 
-.catalog-slider__item--acitve {
+.catalog-slider__item--active {
   display: block;
 }
 
@@ -951,12 +923,16 @@ body {
   position: absolute;
   left: 2px;
   top: 2px;
-  display: block;
+  display: none;
   width: 6px;
   height: 6px;
   box-sizing: border-box;
   border-radius: 50%;
   background-color: #ee3643;
+}
+
+.catalog-slider__dot--active::after {
+  display: block;
 }
 
 .catalog-slider__prev,
@@ -992,7 +968,6 @@ body {
   right: 0;
   position: absolute;
 }
-
 
 .catalog-slider__image img {
   width: 100%;
@@ -1041,35 +1016,122 @@ body {
   margin-bottom: 21px;
 }
 
+/* BRANDS */
+
+.brand {
+  display: flex;
+  width: 220px;
+  height: 145px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.brand a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eaeaea;
+  width: 100%;
+  outline: none;
+}
+
+.brand img {
+  display: block;
+}
+
+.brand a:hover,
+.brand a:focus {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+  border-color: #ffffff;
+}
+
+.brand a:active {
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.brand a:active img {
+  opacity: 0.3;
+}
+
+/**** BRANDS */
+
 /* SERVICES */
 
 .services {
-  padding: 40px 0;
+  padding-top: 40px;
   box-sizing: border-box;
   background-color: #f4f8f9;
 }
 
-.heading-second {
-  margin: 25px 0;
-  font-family: Cuprum, Arial, sans-serif;
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #000000;
-  text-transform: uppercase;
+.services__header {
+  margin-bottom: 35px;
+}
+
+.services__intro {
+  max-width: 400px;
+}
+
+.services__slider {
+  display: flex;
+}
+
+.services__selector {
+  position: relative;
+  width: 240px;
+  margin: 35px 0;
+  align-self: flex-start;
+}
+
+.services__selector::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 272px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('../img/services-shadow.png') no-repeat center;
 }
 
 .services__switch {
   display: block;
+  width: 100%;
+  margin: 0;
+  padding: 15px 23px;
+  border: none;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
+  text-align: left;
   color: #ffffff;
   background-color: #32425c;
 }
 
+.services__slider-wrapper {
+  width: 700px;
+}
+
 .services__slide {
   display: none;
+  min-height: 249px;
+  padding: 35px 80px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.services__slide--delivery {
+  background-image: url("../img/bg-delivery.png");
+}
+
+.services__slide--warranty {
+  background-image: url("../img/bg-warranty.png");
+}
+
+.services__slide--credit {
+  background-image: url("../img/bg-credit.png");
 }
 
 .services__slide--active {
@@ -1077,6 +1139,8 @@ body {
 }
 
 .services__slide h3 {
+  margin: 0;
+  margin-bottom: 25px;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
@@ -1085,17 +1149,24 @@ body {
   text-transform: uppercase;
 }
 
-.services__switch:hover,
-.services__switch:focus
-.services__switch--active:hover,
-.services__switch--active:focus {
-  background-color: #293449;
-  color: #ffffff;
+.services__slide p {
+  width: 378px;
 }
 
-.services__switch--active {
+.services__switch:hover,
+.services__switch:focus {
+  background-color: #293449;
+  color: #ffffff;
+  border-top-color: #405069;
+  border-bottom-color: #293449;
+}
+
+.services__switch--active,
+.services__switch--active:focus,
+.services__switch--active:hover {
   color: #32425c;
   background-color: #ffffff;
+  border-color: #ffffff;
 }
 
 /*** SERVICES */

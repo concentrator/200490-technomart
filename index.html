@@ -96,7 +96,7 @@
               </p>
               <a class="catalog-slider__button button button--red" href="catalog.html">Открыть каталог</a>
             </div>
-            <div class="catalog-slider__item catalog-slider__item--acitve">
+            <div class="catalog-slider__item catalog-slider__item--active">
               <div class="catalog-slider__caption">
                 <h3>Дрели</h3>
                 <p>Соседям на радость!</p>
@@ -214,7 +214,7 @@
             <div class="services__slider-wrapper">
               <div class="services__slide services__slide--active services__slide--delivery">
                 <h3>Доставка</h3>
-                <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
+                <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! Ведь&nbsp;мы&nbsp;неплохо&nbsp;заработаем,<br> поднимая его на ваш этаж!</p>
               </div>
               <div class="services__slide services__slide--warranty">
                 <h3>Гарантия</h3>
@@ -325,6 +325,10 @@
       <div class="modal-map__image"><img src="img/map_big.png" width="940" height="446" alt="Как добраться"></div>
       <button class="modal-map__close"><span class="visually-hidden">Закрыть</span></button>
     </section>
-
+    <script src="js/script.js"></script>
+    <script>
+      switchSlides('services__switch', 'services__slide', 'active');
+      switchSlides('catalog-slider__dot', 'catalog-slider__item', 'active', 'catalog-slider__prev', 'catalog-slider__next');
+    </script>
   </body>
 </html>
