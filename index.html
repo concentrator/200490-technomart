@@ -301,18 +301,23 @@
     <section class="modal modal-contact">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="modal-contact__form" action="https://echo.htmlacademy.ru/" method="post">
-        <p class="modal-contact__input">
-          <label for="name">Ваше имя:</label>
-          <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
-        </p>
-        <p class="modal-contact__input">
-          <label for="email">Ваш e-mail:</label>
-          <input type="email" name="email" id="email" placeholder="Для отправки ответа">
-        </p>
-        <p class="modal-contact__text">
-          <label for="message">Текст письма:</label>
-          <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
-        </p>
+        <fieldset class="modal-contact__fieldset">
+          <div class="modal-contact__row modal-contact__row--flex">
+            <p class="modal-contact__input">
+              <label for="name">Ваше имя:</label>
+              <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
+            </p>
+            <p class="modal-contact__input">
+              <label for="email">Ваш e-mail:</label>
+              <input type="email" name="email" id="email" placeholder="Для отправки ответа">
+            </p>
+          </div>
+          <div class="modal-contact__row">
+            <label for="message">Текст письма:</label>
+            <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+          </div>
+        </fieldset>
+
         <div class="modal-contact__bottom">
           <button class="modal-contact__submit button button--red" type="submit">Отправить</button>
         </div>
@@ -325,7 +330,8 @@
       <div class="modal-map__image"><img src="img/map_big.png" width="940" height="446" alt="Как добраться"></div>
       <button class="modal-map__close"><span class="visually-hidden">Закрыть</span></button>
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/slider.js"></script>
     <script>
       switchSlides('services__switch', 'services__slide', 'active');
       switchSlides('catalog-slider__dot', 'catalog-slider__item', 'active', 'catalog-slider__prev', 'catalog-slider__next');
