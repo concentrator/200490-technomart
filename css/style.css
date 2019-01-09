@@ -296,7 +296,8 @@ body {
   display: block;
   width: 220px;
   height: 42px;
-  padding: 9px 0;
+  padding-top: 10px;
+  padding-bottom: 8px;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
@@ -417,6 +418,7 @@ body {
   padding-bottom: 13px;
   box-sizing: border-box;
   color: #ffffff;
+  margin: 0;
 }
 
 .header-top__link--bookmark {
@@ -1283,20 +1285,129 @@ body {
 .filter__form fieldset {
   display: block;
   padding: 10px 0 25px 0;
+  margin: 0;
   border: none;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .filter__form legend {
   display: block;
-  float: left;
+  /* float: left; */
   margin: 0;
   padding: 0;
+  padding-top: 11px;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.filter__price-range {
+  position: relative;
+  width: 220px;
+  height: 80px;
+  margin-top: 4px;
+  background-color: #f7f3ec;
+  border-radius: 0 0 4px 4px;
+}
+
+.filter__price-scale {
+  height: 2px;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #d7dcde;
+}
+
+.filter__price-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 152px;
+  background-color: #63a63e;
+}
+
+.filter__knob {
+  position: absolute;
+  top: -9px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 0 rgba(224, 221, 216, 1);
+  cursor: pointer;
+}
+
+.filter__knob::after {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #ababab;
+  border-radius: 50%;
+}
+
+.filter__knob--min {
+  left: 0;
+}
+
+.filter__knob--max {
+  right: 20px;
+}
+
+.filter__price-output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter__price-value {
+  display: block;
+  width: 95px;
+  height: 38px;
+  padding: 10px;
+  padding-left: 12px;
+  margin: 9px 0;
+  background-color: #f7f3ec;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.filter__price-field {
+  display: block;
+  height: 18px;
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  box-sizing: border-box;
+  background: none;
+}
+
+.filter__price-field[name="price-min"] {
+  width: 9px;
+}
+
+.filter__price-field[name="price-max"] {
+  width: 47px;
+}
+
+.filter__price-dash {
+  user-select: none;
 }
 
 .filter__checkbox label,
