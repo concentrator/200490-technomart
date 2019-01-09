@@ -83,6 +83,7 @@ input[type="radio"].visually-hidden {
 }
 
 body {
+  min-width: 960px;
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -96,8 +97,8 @@ body {
   display: block;
   content: url("../img/new_flag.png");
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 0;
+  right: 0;
   width: 60px;
   height: 59px;
   z-index: 10;
@@ -183,29 +184,23 @@ body {
 }
 
 .shop-info {
-  min-height: 536px;
   box-sizing: border-box;
   padding: 55px 0;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
 
-.about-us {
+.shop-info__about {
   width: 550px;
 }
 
-.contact-us {
+.shop-info__contact {
   width: 300px;
 }
 
 .page-footer__top {
-  min-height: 193px;
   display: flex;
-}
-
-.copyright {
-  min-height: 107px;
-  box-sizing: border-box;
 }
 
 .copyright__container {
@@ -275,7 +270,7 @@ body {
 
 .heading-main h1 {
   margin: 0;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -285,7 +280,7 @@ body {
 
 .heading-second {
   margin: 25px 0;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -302,6 +297,7 @@ body {
 /* LOGO */
 
 .logo {
+  display: block;
   width: 220px;
   height: 42px;
   padding: 9px 0;
@@ -315,7 +311,12 @@ body {
 }
 
 .logo--footer {
+  width: 220px;
   height: 63px;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 .logo:hover,
@@ -333,7 +334,7 @@ body {
 
 .page-header {
   padding-bottom: 60px;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   background-color: #f3f7f8;
 }
 
@@ -744,7 +745,7 @@ body {
   display: inline-block;
   padding: 10px;
   border-radius: 3px;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
@@ -850,7 +851,7 @@ body {
 
 .promo__title {
   margin: 0;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -978,7 +979,7 @@ body {
 
 .catalog-slider__caption h3 {
   margin: 0;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
@@ -988,7 +989,7 @@ body {
 
 .catalog-slider__caption p {
   margin: 0;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1003,7 +1004,7 @@ body {
 
 .popular__title {
   margin: 4px 0;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
@@ -1104,7 +1105,7 @@ body {
   border: none;
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
   text-align: left;
@@ -1142,8 +1143,8 @@ body {
 
 .services__slide h3 {
   margin: 0;
-  margin-bottom: 25px;
-  font-family: Cuprum, Arial, sans-serif;
+/*   margin-bottom: 25px; */
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -1153,6 +1154,11 @@ body {
 
 .services__slide p {
   width: 378px;
+  margin: 25px 0;
+}
+
+.services__slide-button {
+  width: 195px;
 }
 
 .services__switch:hover,
@@ -1173,16 +1179,61 @@ body {
 
 /*** SERVICES */
 
+/* SHOP INFO */
+
+.about-us p {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.about-us p:nth-of-type(2) {
+  width: 400px;
+}
+
 .about-us__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 15px;
+  margin-bottom: 37px;
 }
 
 .about-us__list li {
-  font-family: Cuprum, Arial, sans-serif;
+  position: relative;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
+  padding-left: 35px;
+  margin: 20px 0;
+}
+
+.about-us__list li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+}
+
+.about-us__button{
+  width: 220px;
+}
+
+.contact-us p {
+  width: 200px;
+  margin: 25px 0;
+}
+
+.contact-us__map {
+  margin-top: 31px;
+  margin-bottom: 32px;
+}
+
+.contact-us__button {
+  width: 100%;
 }
 
 /* INNER PAGE - CATALOG */
@@ -1316,14 +1367,16 @@ body {
   display: flex;
   position: relative;
   width: 220px;
-  border: 1px solid #e5e5e5;
   box-sizing: border-box;
-  /* min-height: 318px; */
 }
 
 .product:focus-within,
 .product:hover {
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.product:focus-within .product__wrapper,
+.product:hover .product__wrapper {
   border-color: #ffffff;
 }
 
@@ -1337,6 +1390,7 @@ body {
   padding-top: 0;
   box-sizing: border-box;
   background-color: #ffffff;
+  border: 1px solid #e5e5e5;
 }
 
 .product__photo {
@@ -1427,7 +1481,7 @@ body {
 
 .product__button {
   display: block;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1492,61 +1546,81 @@ body {
 
 .page-footer {
   background-color: #32425c;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
 }
 
-.footer-menu {
+.page-footer__top {
+  padding-bottom: 20px;
+}
+
+.footer-about__logo {
+  margin-bottom: 33px;
+}
+
+.footer-about__text {
+  padding-left: 3px;
+  margin-bottom: 29px;
+}
+
+.footer-about__contacts {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  color: #f3f7f9;
+}
+
+.footer-nav {
   width: 560px;
 }
 
-.footer-menu__list,
-.footer-shop__list {
+.footer-nav__list,
+.footer-nav__shop-list {
   display: flex;
   justify-content: flex-end;
   list-style: none;
   margin: 0;
-  margin-top: 40px;
   padding: 0;
 }
 
-.footer-menu__item:not(:first-child),
-.footer-shop__item:not(:first-child) {
+.footer-nav__list {
+  margin-top: 38px;
+  margin-bottom: 33px;
+}
+
+.footer-nav__item:not(:first-child),
+.footer-nav__shop-item:not(:first-child) {
   margin-left: 60px;
 }
 
-.footer-menu__item a,
-.footer-shop__item a {
+.footer-nav__item a,
+.footer-nav__shop-item a {
   font-size: 18px;
   line-height: 24px;
 }
 
-.footer-menu__item a {
+.footer-nav__item a {
   color: #f3f7f9;
 }
 
-.footer-shop__item a {
+.footer-nav__shop-item a {
   color: #ffd180;
 }
 
-.footer-menu__item a:hover,
-.footer-menu__item a:focus,
-.footer-shop__item a:hover,
-.footer-shop__item a:focus {
+.footer-nav__item a:hover,
+.footer-nav__item a:focus,
+.footer-nav__shop-item a:hover,
+.footer-nav__shop-item a:focus {
   text-decoration: underline;
 }
 
-.footer-menu__item a:active,
-.footer-shop__item a:active {
+.footer-nav__item a:active,
+.footer-nav__shop-item a:active {
   opacity: 0.5;
 }
 
-.footer-shop__contacts {
-  font-size: 18px;
-  line-height: 24px;
-  color: #f3f7f9;
-}
-
 .copyright {
+  padding-top: 25px;
+  padding-bottom: 22px;
   font-size: 16px;
   line-height: 18px;
   background-color: #293449;
@@ -1555,11 +1629,64 @@ body {
 .copyright__text,
 .copyright__feedback,
 .copyright__developer {
+  margin: 12px 0;
   color: #ffffff;
 }
 
+.copyright__developer {
+  margin-right: 15px;
+  margin-left: 50px;
+}
+
+.copyright__feedback {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.copyright__text {
+  width: 230px;
+  margin-right: auto;
+}
+
 .social {
+  width: 300px;
   list-style: none;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
+  padding-left: 40px;
+  text-align: center;
+}
+
+.social__item {
+  display: inline-block;
+}
+
+.social__link {
+  display: block;
+  width: 42px;
+  height: 42px;
+  background-color: #212a3a;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social__link:hover,
+.social__link:focus {
+  background-color: #ee3643;
+}
+
+.social__link--vk {
+  background-image: url(../img/icon-vk.svg);
+}
+
+.social__link--fb {
+  background-image: url(../img/icon-fb.svg);
+}
+
+.social__link--insta {
+  background-image: url(../img/icon-insta.svg);
 }
 
 .copyright__feedback span,
@@ -1675,7 +1802,7 @@ body {
 .modal-contact label {
   display: block;
   margin-bottom: 10px;
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 18px;
 }
