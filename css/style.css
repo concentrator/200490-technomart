@@ -1618,15 +1618,33 @@ body {
 
 .pagination__item {
   display: block;
-  padding: 10px;
+  padding: 9px 15px;
+  margin-right: 10px;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
   text-transform: uppercase;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 3px;
 }
 
-.pagination__item--current {
+.pagination__item:hover {
+  border-color: #bdc6ca;
+}
+
+.pagination__item:active {
+  border-color: #ee3643;
+}
+
+.pagination__item.current {
   background-color: #ee3643;
+  border-color: #ee3643;
+}
+
+.pagination__item--text {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /*** CATALOG */
