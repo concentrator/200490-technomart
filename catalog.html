@@ -84,7 +84,7 @@
               <span>Фильтр:</span>
             </div>
             <form class="filter__form" method="POST" action="https://echo.htmlacademy.ru">
-              <fieldset class="filter__price">
+              <fieldset class="fieldset filter__price">
                 <legend>Цена:</legend>
                 <div class="filter__price-range">
                   <div class="filter__price-scale">
@@ -105,7 +105,7 @@
                   </p>
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="fieldset filter__brand">
                 <legend>Производители:</legend>
                 <p class="filter__checkbox">
                   <input class="visually-hidden" id="checkbox-bosch" type="checkbox" name="brand" value="BOSCH">
@@ -120,22 +120,22 @@
                   <label for="checkbox-makita">Makita</label>
                 </p>
                 <p class="filter__checkbox">
-                  <input class="visually-hidden" id="checkbox-dewalt" type="checkbox" name="brand" value="Dewalt">
+                  <input class="visually-hidden" id="checkbox-dewalt" type="checkbox" name="brand" value="Dewalt" checked disabled>
                   <label for="checkbox-dewalt">Dewalt</label>
                 </p>
                 <p class="filter__checkbox">
-                  <input class="visually-hidden" id="checkbox-hitachi" type="checkbox" name="brand" value="Hitachi">
+                  <input class="visually-hidden" id="checkbox-hitachi" type="checkbox" name="brand" value="Hitachi" disabled>
                   <label for="checkbox-hitachi">Hitachi</label>
                 </p>
               </fieldset>
-              <fieldset>
+              <fieldset class="fieldset filter__power">
                 <legend>Питание:</legend>
                 <p class="filter__radio">
-                  <input class="visually-hidden" id="radio-battery" type="radio" name="power" value="battery">
+                  <input class="visually-hidden" id="radio-battery" type="radio" name="power" value="battery" checked>
                   <label for="radio-battery">Аккумуляторные</label>
                 </p>
                 <p class="filter__radio">
-                  <input class="visually-hidden" id="radio-ac" type="radio" name="power" value="ac">
+                  <input class="visually-hidden" id="radio-ac" type="radio" name="power" value="ac" disabled>
                   <label for="radio-ac">Сетевые</label>
                 </p>
               </fieldset>

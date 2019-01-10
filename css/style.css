@@ -1282,7 +1282,7 @@ body {
 
 /* FILTER */
 
-.filter__form fieldset {
+.fieldset {
   display: block;
   padding: 10px 0 25px 0;
   margin: 0;
@@ -1290,9 +1290,12 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.fieldset:last-of-type {
+  border-bottom: none;
+}
+
 .filter__form legend {
   display: block;
-  /* float: left; */
   margin: 0;
   padding: 0;
   padding-top: 11px;
@@ -1308,6 +1311,7 @@ body {
   width: 220px;
   height: 80px;
   margin-top: 4px;
+  margin-bottom: 9px;
   background-color: #f7f3ec;
   border-radius: 0 0 4px 4px;
 }
@@ -1378,7 +1382,7 @@ body {
   height: 38px;
   padding: 10px;
   padding-left: 12px;
-  margin: 9px 0;
+  margin: 0;
   background-color: #f7f3ec;
   box-sizing: border-box;
   display: flex;
@@ -1410,8 +1414,30 @@ body {
   user-select: none;
 }
 
+.filter__brand legend,
+.filter__power legend {
+  padding-top: 16px;
+}
+
+.filter__brand {
+  padding-bottom: 6px;
+}
+
+.filter__power {
+  margin-bottom: 38px;
+}
+
+.filter__checkbox,
+.filter__radio {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 .filter__checkbox label,
 .filter__radio label {
+  position: relative;
+  display: block;
+  padding-left: 35px;
   font: inherit;
   font-size: 15px;
   line-height: 30px;
@@ -1419,12 +1445,77 @@ body {
   text-transform: uppercase;
 }
 
+.filter__checkbox label::before,
+.filter__radio label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.filter__checkbox label::before {
+  top: 3px;
+  width: 23px;
+  height: 23px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath fill='%23b5b5b5' d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E%0A");
+}
+
+.filter__radio label::before {
+  top: 2px;
+  width: 25px;
+  height: 25px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%23b5b5b5' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3C/svg%3E%0A");
+}
+
+.filter__checkbox input:focus + label::before,
+.filter__checkbox label:hover::before,
+.filter__radio input:focus + label::before,
+.filter__radio label:hover::before {
+  opacity: 1;
+}
+
+.filter__checkbox input:focus + label::before,
+.filter__radio input:focus + label::before {
+  outline: 1px solid #ffd180;
+}
+
+.filter__checkbox input:checked + label::before {
+  width: 27px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath fill='%23b5b5b5' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%23b5b5b5' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E%0A");
+}
+
+.filter__radio input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%23b5b5b5' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3Ccircle fill='%23b5b5b5' cx='12.5' cy='12.5' r='4.5'/%3E%3C/svg%3E%0A");
+}
+
+.filter__checkbox input:disabled + label::before,
+.filter__radio input:disabled + label::before {
+  opacity: 0.3;
+}
+
 .filter__submit {
   display: block;
+  width: 140px;
+  padding: 9px 10px;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
+  background-color: transparent;
   text-transform: uppercase;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.filter__submit:hover,
+.filter__submit:focus {
+  border-color: #bdc6ca;
+}
+
+.filter__submit:active {
+  border-color: #ee3643;
 }
 
 /*** FILTER */
@@ -1781,7 +1872,7 @@ body {
 }
 
 .copyright__text {
-  width: 230px;
+  width: 240px;
   margin-right: auto;
 }
 
@@ -1791,7 +1882,7 @@ body {
   margin: 0 auto;
   margin-top: 10px;
   padding: 0;
-  padding-left: 40px;
+  padding-left: 30px;
   text-align: center;
 }
 
