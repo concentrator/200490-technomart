@@ -524,19 +524,18 @@ body {
 .header-main__contacts {
   width: 270px;
   margin-right: 50px;
+  margin-top: 26px;
 }
 
 .header-main__phone {
   position: relative;
   display: block;
-  margin-top: 26px;
   padding: 9px 0;
   padding-left: 71px;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
   border: 3px solid #ffffff;
-
 }
 
 .header-main__phone::before {
@@ -595,6 +594,11 @@ body {
   margin-left: 10px;
 }
 
+.auth-menu__item--profile {
+  margin-left: 0;
+  padding-right: 9px;
+}
+
 .auth-menu__item a {
   display: block;
   padding: 12px 24px;
@@ -618,9 +622,9 @@ body {
 }
 
 .auth-menu__item--profile a {
-  width: 200px;
+  width: 193px;
   padding-left: 47px;
-  padding-right: 12px;
+  padding-right: 10px;
 }
 
 .auth-menu__item--logout a {
@@ -648,7 +652,8 @@ body {
   pointer-events: none;
 }
 
-.auth-menu__item a:hover path {
+.auth-menu__item a:hover path,
+.auth-menu__item a:focus path {
   fill: #32425c;
 }
 
@@ -656,9 +661,8 @@ body {
   fill: #c5c5c5;
 }
 
-
-.auth-menu__item a:hover,
-.auth-menu__item a:focus,
+.auth-menu__item:not(.auth-menu__item--profile) a:hover,
+.auth-menu__item:not(.auth-menu__item--profile) a:focus,
 .header-main__office a:hover,
 .header-main__office a:focus {
   color: #ee3643;
@@ -1882,6 +1886,7 @@ body {
 .footer-nav__item a:active,
 .footer-nav__shop-item a:active {
   opacity: 0.5;
+  text-decoration: none;
 }
 
 .copyright {
@@ -1912,6 +1917,25 @@ body {
 .copyright__text {
   width: 240px;
   margin-right: auto;
+}
+
+.copyright__feedback span,
+.copyright__developer span {
+  display: block;
+}
+
+.copyright__link {
+  color: #ffd180;
+}
+
+.copyright__link:hover,
+.copyright__link:focus {
+  text-decoration: underline;
+}
+
+.copyright__link:active {
+  color: #ee3643;
+  text-decoration: none;
 }
 
 .social {
@@ -1953,29 +1977,6 @@ body {
 
 .social__link--insta {
   background-image: url(../img/icon-insta.svg);
-}
-
-.copyright__feedback span,
-.copyright__developer span {
-  display: block;
-}
-
-.copyright__feedback a,
-.copyright__developer a {
-  color: #ffd180;
-}
-
-.copyright__feedback a:hover,
-.copyright__feedback a:focus,
-.copyright__developer a:hover,
-.copyright__developer a:focus {
-  text-decoration: underline;
-}
-
-.copyright__feedback a:active,
-.copyright__developer a:active {
-  color: #ee3643;
-  text-decoration: none;
 }
 
 /*** FOOTER */
@@ -2128,7 +2129,6 @@ body {
 .modal-contact__submit {
   width: 100%;
 }
-
 
 .modal-map {
   display:  none;
