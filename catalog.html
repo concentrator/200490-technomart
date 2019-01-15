@@ -89,8 +89,8 @@
                 <div class="filter__price-range">
                   <div class="filter__price-scale">
                     <span class="filter__price-bar"></span>
-                    <button class="filter__knob filter__knob--min" type="button"><span class="visually-hidden">Минимальная</span></button>
-                    <button class="filter__knob filter__knob--max" type="button"><span class="visually-hidden">Максимальная</span></button>
+                    <button class="filter__knob filter__knob--min" id="knob-min" type="button"><span class="visually-hidden">Минимальная</span></button>
+                    <button class="filter__knob filter__knob--max" id="knob-max" type="button"><span class="visually-hidden">Максимальная</span></button>
                   </div>
                 </div>
                 <div class="filter__price-output">
@@ -347,13 +347,18 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal-cart">
-      <h2 class="modal-cart__text">Товар добавлен в корзину!</h2>
-      <div class="modal-cart__buttons">
-        <a class="modal-cart__checkout" href="#">Оформить заказ</a>
-        <button type="button">Продолжить покупки</button>
+    <section class="modal modal--cart" id="modal-cart">
+      <div class="modal__mark-row">
+        <span class="modal__mark"></span>
+        <h2 class="modal__text">Товар добавлен в корзину!</h2>
       </div>
-      <button class="modal-cart__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <div class="modal__flex-row">
+        <a class="modal__button button button--red" href="#">Оформить заказ</a>
+        <button class="modal__button button button--white" type="button">Продолжить покупки</button>
+      </div>
+      <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
+    <script src="js/modal.js"></script>
+    <script src="js/price-range.js"></script>
   </body>
 </html>

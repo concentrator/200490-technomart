@@ -1,3 +1,5 @@
+'use strict';
+
 var switchSlides = function (buttonClass, slideClass, activeSuffix, prevButtonClass, nextButtonClass) {
 
   var buttons = document.querySelectorAll('.' + buttonClass);
@@ -69,4 +71,3 @@ var switchSlides = function (buttonClass, slideClass, activeSuffix, prevButtonCl
     addClickHandler(buttons[i], slides[i]);
   }
 };
-

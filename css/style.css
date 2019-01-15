@@ -756,6 +756,12 @@ body {
   box-sizing: border-box;
   background: none;
   border: none;
+  cursor: pointer;
+}
+
+.button--white {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .button--transparent {
@@ -765,6 +771,10 @@ body {
 .button--transparent:hover,
 .button--transparent:focus {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.button--white:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .button--transparent:active {
@@ -1334,8 +1344,8 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  height: 2px;
   width: 152px;
+  height: 2px;
   background-color: #63a63e;
 }
 
@@ -1371,7 +1381,7 @@ body {
 }
 
 .filter__knob--max {
-  right: 20px;
+  left: 140px;
 }
 
 .filter__price-output {
@@ -1381,37 +1391,23 @@ body {
 }
 
 .filter__price-value {
-  display: block;
   width: 95px;
-  height: 38px;
-  padding: 10px;
-  padding-left: 12px;
   margin: 0;
-  background-color: #f7f3ec;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  border-radius: 4px;
 }
 
 .filter__price-field {
   display: block;
-  height: 18px;
-  padding: 0;
+  width: 100%;
+  height: 38px;
+  padding: 10px;
   border: none;
   font: inherit;
   font-size: 17px;
   line-height: 18px;
+  text-align: center;
   box-sizing: border-box;
-  background: none;
-}
-
-.filter__price-field[name="price-min"] {
-  width: 9px;
-}
-
-.filter__price-field[name="price-max"] {
-  width: 47px;
+  background-color: #f7f3ec;
+  border-radius: 4px;
 }
 
 .filter__price-dash {
@@ -2007,6 +2003,15 @@ body {
   top: 50vh;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 37px 80px;
+  border-top: 7px solid #ff5257;
+  box-sizing: border-box;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+  background-image: linear-gradient(
+    to top, #f1f1f1,
+    #f1f1f1 112px,
+    #ffffff 112px
+  );
   z-index: 10;
 }
 
@@ -2014,7 +2019,7 @@ body {
   display: block;
 }
 
-.modal-contact__close {
+.modal__close {
   display: block;
   width: 40px;
   height: 40px;
@@ -2025,10 +2030,11 @@ body {
   border: none;
   padding: 0;
   cursor: pointer;
+  z-index: 10;
 }
 
-.modal-contact__close::before,
-.modal-contact__close::after {
+.modal__close::before,
+.modal__close::after {
   display: block;
   content: "";
   position: absolute;
@@ -2041,50 +2047,113 @@ body {
   border-radius: 3px;
 }
 
-.modal-contact__close::after {
+.modal__close::after {
   transform: rotate(-45deg);
 }
 
-.modal-contact__close:hover::before,
-.modal-contact__close:hover::after,
-.modal-contact__close:focus::before,
-.modal-contact__close:focus::after {
+.modal__close:hover::before,
+.modal__close:hover::after,
+.modal__close:focus::before,
+.modal__close:focus::after {
   background-color: #ca2c37;
 }
 
-.modal-contact__close:active::before,
-.modal-contact__close:active::after {
+.modal__close:active::before,
+.modal__close:active::after {
   background-color: #ba2732;
 }
 
-.modal-contact {
-  width: 620px;
-  background-color: #ffffff;
-  border-top: 7px solid #ff5257;
-  box-sizing: border-box;
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+.modal__mark-row {
+  margin-top: 10px;
+  margin-bottom: 84px;
+  display: flex;
+  align-items: center;
 }
 
-.modal-contact__fieldset {
-  width: 100%;
-  margin: 0;
-  padding: 37px 80px;
-  border: none;
-  box-sizing: border-box;
-}
-
-.modal-contact__row--flex {
+.modal__flex-row {
   display: flex;
   justify-content: space-between;
 }
 
-.modal-contact__input {
-  width: 220px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+.modal__mark {
+  position: relative;
+  display: block;
+  width: 66px;
+  height: 66px;
+  margin-right: 32px;
+  border-radius: 50%;
+  background-color: #63a63e;
 }
 
-.modal-contact label {
+.modal__mark::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 21px;
+  position: absolute;
+  top: 18px;
+  left: 17px;
+  box-sizing: border-box;
+  border-left: 7px solid #ffffff;
+  border-bottom: 7px solid #ffffff;
+  transform: rotate(-45deg);
+}
+
+.modal__text {
+  margin: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.modal__button {
+  width: 220px;
+}
+
+.modal--cart {
+  width: 620px;
+}
+
+.modal--map {
+  width: 940px;
+  height: 446px;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.modal--map iframe {
+  position: relative;
+  z-index: 1;
+}
+
+.modal__image-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*** MODAL */
+
+/* FORM */
+
+.form__fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.form__row--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form label {
   display: block;
   margin-bottom: 10px;
   font-family: "Cuprum", Arial, sans-serif;
@@ -2092,8 +2161,8 @@ body {
   line-height: 18px;
 }
 
-.modal-contact input,
-.modal-contact textarea {
+.form input,
+.form textarea {
   width: 100%;
   padding: 8px 14px;
   font-family: "PT Sans", Arial, sans-serif;
@@ -2105,21 +2174,50 @@ body {
   border-radius: 3px;
 }
 
-.modal-contact input:hover,
-.modal-contact textarea:hover {
+.form textarea {
+  display: block;
+}
+
+.form input:hover,
+.form textarea:hover {
   border-color: #b5b5b5;
 }
 
-.modal-contact input:focus,
-.modal-contact textarea:focus {
+.form input:focus,
+.form textarea:focus {
   border-color: #ee3643;
 }
 
-.modal-contact input {
+.form input {
   height: 38px;
 }
 
-.modal-contact textarea {
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #a9a9a9;
+  opacity: 1;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #a9a9a9;
+}
+
+.form-contact {
+  width: 460px;
+}
+
+.form-contact__fieldset {
+  margin-bottom: 74px;
+}
+
+.form-contact__input {
+  width: 220px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.form-contact textarea {
   height: 114px;
   min-height: 114px;
   max-height: 114px;
@@ -2128,28 +2226,6 @@ body {
   resize: none;
 }
 
-.modal-contact input::placeholder,
-.modal-contact textarea::placeholder {
-  color: #a9a9a9;
-  opacity: 1;
-}
-
-.modal-contact input::placeholder,
-.modal-contact textarea::placeholder {
-  color: #a9a9a9;
-}
-
-.modal-contact__bottom {
-  padding: 37px 80px;
-  background-color: #f4f4f4;
-}
-
-.modal-contact__submit {
+.form-contact__submit {
   width: 100%;
 }
-
-.modal-map {
-  display:  none;
-}
-
-/*** MODAL */

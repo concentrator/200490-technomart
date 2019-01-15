@@ -246,7 +246,9 @@
           <h2 class="heading-second">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <div class="contact-us__map">
-            <img src="img/map_small.png" width="300" height="158" alt="Как добраться">
+            <a class="contact-us__map-open" href="#">
+              <img src="img/map_small.png" width="300" height="158" alt="Как добраться">
+            </a>
           </div>
           <a class="contact-us__button button button--red" href="#">Заблудились? Напишите нам!</a>
         </section>
@@ -299,38 +301,49 @@
       </div>
     </footer>
 
-    <section class="modal modal-contact">
+    <section class="modal" id="modal-contact">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form class="modal-contact__form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="modal-contact__fieldset">
-          <div class="modal-contact__row modal-contact__row--flex">
-            <p class="modal-contact__input">
+      <form class="form form-contact" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="form__fieldset form-contact__fieldset">
+          <div class="form__row form__row--flex">
+            <p class="form-contact__input">
               <label for="name">Ваше имя:</label>
               <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
             </p>
-            <p class="modal-contact__input">
+            <p class="form-contact__input">
               <label for="email">Ваш e-mail:</label>
               <input type="email" name="email" id="email" placeholder="Для отправки ответа">
             </p>
           </div>
-          <div class="modal-contact__row">
+          <div class="form-contact__row">
             <label for="message">Текст письма:</label>
             <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
           </div>
         </fieldset>
-
-        <div class="modal-contact__bottom">
-          <button class="modal-contact__submit button button--red" type="submit">Отправить</button>
-        </div>
+        <button class="form-contact__submit button button--red" type="submit">Отправить</button>
       </form>
-      <button class="modal-contact__close"><span class="visually-hidden">Закрыть</span></button>
+      <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
-    <section class="modal modal-map">
+    <section class="modal modal--map" id="modal-map">
       <h2 class="visually-hidden">Карта проезда в офис</h2>
-      <div class="modal-map__image"><img src="img/map_big.png" width="940" height="446" alt="Как добраться"></div>
-      <button class="modal-map__close"><span class="visually-hidden">Закрыть</span></button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.32085871597594!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya+Konyushennaya+Street%2C+19%2F8%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1547130290002" width="940" height="446" style="border:0" allowfullscreen></iframe>
+      <div class="modal__image-map"><img src="img/map_big.png" width="940" height="446" alt="Как добраться"></div>
+      <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
     </section>
+
+    <section class="modal modal--cart" id="modal-cart">
+      <div class="modal__mark-row">
+        <span class="modal__mark"></span>
+        <h2 class="modal__text">Товар добавлен в корзину!</h2>
+      </div>
+      <div class="modal__flex-row">
+        <a class="modal__button button button--red" href="#">Оформить заказ</a>
+        <button class="modal__button button button--white" type="button">Продолжить покупки</button>
+      </div>
+      <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </section>
+
     <script src="js/modal.js"></script>
     <script src="js/slider.js"></script>
     <script>
